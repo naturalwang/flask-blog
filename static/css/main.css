@@ -1,0 +1,256 @@
+        body {
+            font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+            padding-top: 62px;
+        }
+        .footer {
+          margin: 15px auto;
+          border-style: solid;
+          border-color: #d2c3c3;
+          border-width: 1px;
+          padding: 10px 7px;
+          width: 95%
+        }
+
+/*导航栏的css*/
+        nav > a {
+            color: #999;
+            text-decoration: none;
+        }
+        .gua-right {
+            float: right;
+        }
+        a.gua-active {
+            background: red;
+        }
+        nav {
+            margin-left: -8px;
+            background: black;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            width: 103%;
+            height: 60px;
+            /* effect */
+            opacity: 0.8;
+            font-size: 18px;
+        }
+        a.gua-nav-link {
+            display: inline-block;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            height: inherit;
+            float: left;
+        }
+        a.gua-nav-link:hover, a.gua-nav-image:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+/*profile 的 css*/
+        .gua-content {
+          background-color: #fafbf8;
+          padding: 10px;
+          border-radius: 10px;
+          border-style: double;
+          border-color: #e4cfcf;
+          font-size: 23px;
+        }
+        .gua-info {
+          padding: 5px;
+          margin: 8px;
+        }
+        .button-info {
+          margin-left: 20px;
+          margin-top: -3px;
+          display: inline-block;
+        }
+        .input-info {
+          display: inline-block;
+        }
+        .info-avatar {
+          margin: 10px;
+          padding: 10px;
+        }
+        .description {
+          color: #2c6363;
+          font-size: 31px;
+        }
+        .avatar-m {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        .avatar-l {
+            max-width: 150px;
+            max-height: 150px;
+        }
+        .avatar-s {
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+/*blog 的 css*/
+        .gua-flex {
+          display: flex;
+        }
+        .gua-1{
+        flex-grow:1;
+        }
+        .gua-7{
+        flex-grow:7;
+        }
+        .gua-blog-container {
+          margin: 10px 50px;
+        }
+        .gua-blog-main {
+          margin: 0 15px;
+          /*padding: 33px;*/
+          border-style: solid;
+          border-color: #d2c3c3;
+          border-width: 1px;
+          padding: 10px 7px;
+          max-width: 1000px;
+          min-width: 400px;
+        }
+        .gua-blog-sidebar {
+          margin: 0 15px;
+          text-align: center;
+        }
+        .gua-avatar {
+          margin: 0 auto;
+          border-style: solid;
+          border-color: #d2c3c3;
+          border-width: 1px;
+          padding: 10px 7px;
+          width: 180px;
+        }
+         .gua-blog-cell {
+           border-color: gray;
+           border-bottom-width: 1px;
+           border-bottom-style: dotted;
+           padding: 25px 10px;
+        }
+        .gua-blog-p {
+          display: inline-block;
+          padding-right: 80px;
+        }
+         .gua-blog-date, .gua-blog-article, .gua-blog-author {
+          color: gray;
+          font-size: 20px;
+          font-family: cursive;
+        }
+         .gua-blog-title {
+          font-size: 36px;
+        }
+         .gua-about:hover {
+           text-decoration: none;
+           color: #91170a;
+         }
+         .gua-about:visited {
+         color: black;
+         }
+         .gua-about {
+           font-family: 'Gruppo', cursive;
+           font-size: 25px;
+           color: #a5bdd4;
+           background-color: transparent;
+         }
+         h1, .h1 {
+           font-size: 60px;
+           font-family: cursive;
+         }
+         .gua-link {
+           list-style-type: none;
+           list-style-position: inside;
+           color: black;
+         }
+         .gua-blog-tag {
+           list-style-type: none;
+           list-style-position: inside;
+           list-style-image: url();
+         }
+         .gua-sidebar-box {
+           margin: 15px auto;
+           border-style: solid;
+           border-color: #d2c3c3;
+           border-width: 1px;
+           padding: 10px 7px;
+           width: 180px;
+         }
+         .gua-blog-goto-edit{
+           display:block;
+           float: right;
+           margin: 15px 55px;
+         }
+         .gua-link > li {
+           margin: 5px;
+         }
+         a {
+           color: #666;
+         }
+         .gua-line-h {
+           height: 1px;
+           background: #c7d6e0;
+           margin: 75px 12px 8px;
+         }
+
+         #gua-link-github {
+           list-style-image: url('https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-16.png');
+         }
+        #logout {
+          border: None;
+          background-color: transparent;
+          color: white;
+          display: inline;
+          float: right;
+          padding: 18px;
+          margin-right: 50px;
+        }
+        #logout:hover {
+          background-color: white;
+          color: black;
+          cursor: pointer;
+        }
+
+/*blog_edit 的 css*/
+      .gua-blog-add {
+        margin: 10px;
+        text-align: center;
+      }
+      .blog-add-title {
+        margin: 10px 0;
+      }
+      .gua-blog-edit {
+        margin: 15px 0;
+      }
+      #id-button-blog-add {
+        width: 96px;
+        margin: 15px;
+      }
+
+
+/* todo 的 css */
+/*.background {
+        background-image: url("/static/img/forgotten_world_colosseum.jpg");
+        background-repeat: no-repeat;
+    }
+    .todo-table {
+        margin: 30px auto;
+    }
+    .center {
+        text-align: center;
+    }
+    #h1-todo {
+        font-size: 3em;
+        margin: .67em 0;
+        color: lightslategray;;
+    }
+    .transparent {
+        background: transparent !important;
+    }
+    #id-input-todo-add {
+        width: 270px;
+    }*/

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}博客{% endblock %}
+{% block content %}
+<div class="gua-blog-container gua-flex">
+
+    <div class="gua-blog-main gua-7">
+       <div class="gua-about">
+         <h1>Articles</h1>
+         <a class="gua-blog-goto-edit" href="{{ url_for('.add_article') }}">--> 写博客</a>
+       </div>
+
+       <div class="gua-line-h"></div>
+
+       <div class="gua-blog-content">
+            {% for b in blogs  %}
+                <div class="gua-blog-cell">
+                  <h3 class="gua-blog-title">{{ b.title }}</h3>
+                  <p class='gua-blog-p gua-blog-date'>{{ b.created_time }}</p>
+                  <p class="gua-blog-p gua-blog-author">by: {{ b.username }}</p>
+                  <div class="gua-blog-article">
+                            <p>{{ b.content|safe }}</p>
+                  <!-- <a class="gua-blog-read"href="#">阅读全文</a> -->
+                  <!-- <a class="gua-blog-delete" href="{{ url_for('.delete', id=b.id) }}">删除</a> -->
+                  </div>
+              </div>
+            {% endfor %}
+       </div>
+
+  </div>
+
+   <div class="gua-blog-sidebar gua-1">
+       <div class="gua-avatar">
+         <img src="http://static.saltycrane.com/image/saltycrane_5.png" alt="avatar">
+       </div>
+       <div class="gua-sidebar-box">
+         <a class="gua-about">About</a>
+         <p>
+          漫道求索，或有咨嗟，常怀世事。<br>
+          念短衣轻马，看尽遥山。<br>
+          浮生休死，何以向樽前？<br>
+        </p>
+       </div>
+       <ul class="gua-link gua-sidebar-box">
+         <a class="gua-about">Link</a>
+         <li id="gua-link-github"><a href="https://github.com/naturalwang" target="_blank">GitHub</a></li>
+       </ul>
+       <ul class="gua-blog-tag gua-sidebar-box">
+         <li><a class="gua-about">Tags(建设中)</a></li>
+         <li><a  class="gua-ul-li"href="#">随笔</a></li>
+         <li><a href="#">Python</a></li>
+       </ul>
+     </div>
+
+   </div>
+{% endblock %}

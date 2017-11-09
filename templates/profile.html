@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}博客{% endblock %}
+{% block content %}
+    <div class="gua-content">
+    <div class="gua-info">
+        用户ID: {{ user.id }}
+    </div>
+    <div class="gua-info">
+        用户名：{{ user.username }}
+    </div>
+    <div class="gua-info">
+      <form action="/user/update_password" method="post">
+          密码：
+          <input class="form-control input-info" id="focusedInput" name="password" value="{{ user.password }}" style="width: 400px;">
+          <button class="btn btn-success button-info">修改密码</button>
+      </form>
+    </div>
+    <div class="gua-info">
+      <form action="/user/update_avatar" method="post">
+          头像：
+          <input class="form-control input-info" id="focusedInput" name="avatar" value="{{ user.avatar }}" style="width: 600px;">
+          <button class="btn btn-success button-info">修改头像</button>
+      </form>
+    </div>
+    <div class="description gua-info">
+      没做图片上传，这里只能填外链url，将就一下 : )
+    </div>
+    <div class="gua-info">
+      头像预览：
+      <div class="gua-info">
+        <span class="info-avatar">大<img src="{{ user.avatar }}" class="avatar-l"></span>
+        <span class="info-avatar">中<img src="{{ user.avatar }}" class="avatar-m"></span>
+        <span class="info-avatar">小<img src="{{ user.avatar }}" class="avatar-s"></span>
+      </div>
+    </div>
+  </div>
+{% endblock %}

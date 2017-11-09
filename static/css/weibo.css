@@ -1,0 +1,118 @@
+.gua-weibo-container {
+    background-color: #060606;
+    padding-top: 20px;
+    font-family: 'Gruppo', KaiTi;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.gua-weibo-textarea textarea {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #7796a9;
+    width: 630px;
+    border-radius: 5px;
+    color: #b9afaf;
+    padding: 10px;
+    margin: 0 auto 20px;
+    font-size: 20px;
+}
+#id-button-weibo-add {
+  float: right;
+}
+.gua-weibo-tools {
+width: 630px;
+margin: 0 auto;
+}
+.gua-weibo-tools button{
+    cursor: pointer;
+}
+.gua-weibo-main {
+  background-color: #262627;
+  border: 1px solid #45494c;
+  width: 700px;
+  border-radius: 5px;
+  color: #d0c9c9;
+  padding: 10px;
+  margin: 35px auto 20px;
+}
+}
+.gua-weibo-cell {
+    border-bottom: solid 1px #9c9b9b;
+    margin-bottom: 13px;
+}
+.gua-weibo-detail {
+    padding-left: 10px;
+}
+.gua-weibo-username {
+    font-weight: bold;
+    color: #bcc6d0;
+}
+.gua-weibo-content {
+    padding: 10px 20px 0 58px;
+    font-size: 25px;
+}
+.gua-weibo-time {
+    font-size: 18px;
+    color: #8899a6;
+}
+.gua-weibo-avatar {
+  margin: 0 auto;
+  border-style: solid;
+  border-color: #c1b7b7;
+  border-width: 1px;
+  max-width: 60px;
+  max-height: 60px;
+}
+.gua-weibo-icon {
+  float: right;
+  padding-right: 10px;
+  position: relative;
+  top: -45px;
+}
+
+.gua-comment-cell {
+    display: none;
+    background-color: rgb(68, 68, 68);
+    padding: 10px 10px 50px;
+    font-size: 12px;
+    color: white;
+}
+.gua-comment-input {
+  font-size: 20px;
+}
+button.gua-comment-button {
+  margin-top: 4px;
+  cursor: pointer;
+  float: right;
+  font-size: 17px;
+  width: 105px;
+}
+
+.gua-comment-content {
+    display: inline;
+}
+.gua-comment-content-cell {
+    padding: 5px 20px 5px 0px;
+    margin: 0 5px 0 55px;
+    overflow: hidden;
+    font-size: 20px;
+}
+.gua-comment-content-cell-margin {
+    margin-left: 10px;
+    display: inline-block;
+}
+.gua-comment-content-cell + .gua-comment-content-cell {
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-color: #868c90;
+}
+.gua-comment-avatar {
+    float: left;
+    max-width: 50px;
+    max-height: 50px;
+}
+.gua-comment-content-avatar {
+    text-align: left;
+    max-width: 50px;
+    max-height: 50px;
+}

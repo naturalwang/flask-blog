@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}橘子洲头{% endblock %}
+{% block content %}
+<div class="form-group gua-blog-add">
+    <form action="{{ url_for('.add') }}" method="post">
+        <input class="blog-add-title form-control" id="focusedInput" type="text" name="title" placeholder="文章标题">
+        <div class="gua-blog-edit">
+          <!-- <textarea class="form-control" rows="3" id="textArea" style="margin: 0px -12.8438px 0px 0px; width: 424px; height: 87px;"></textarea> -->
+            <textarea id="textArea" class="form-control" rows="10" name="content" placeholder="文章内容"></textarea>
+        </div>
+        <button id="id-button-blog-add" class="btn btn-primary">发表</button>
+        <a class="btn btn-default" href="{{ url_for('.index') }}">取消编辑</a>
+    </form>
+</div>
+
+{% endblock %}

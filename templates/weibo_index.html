@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block script %}
+  {{ super() }}
+  <script src="/static/js/weibo.js"></script>
+  <link rel="stylesheet" href="/static/css/weibo.css">
+{% endblock %}
+{% block title %}微博{% endblock %}
+{% block content %}
+  <div class="gua-weibo-container">
+
+    <div class="gua-weibo-edit">
+        <form class="form-group" action="/weibo/add" method="post">
+            <div class="gua-weibo-textarea">
+                <textarea id="textArea" class="form-control" rows="10" name="content" placeholder="记录一下生活吧^_^"></textarea>
+            </div>
+            <div class="gua-weibo-tools">
+              <button  class="gua-button-tools btn btn-primary">
+                <span class="glyphicon glyphicon-camera"></span>
+              </button>
+              <button  class="gua-button-tools btn btn-primary">
+                <span class="glyphicon glyphicon-music"></span>
+              </button>
+              <button class="gua-button-tools btn btn-primary">
+                <span class="glyphicon glyphicon-globe"></span>
+              </button>
+              <button id="id-button-weibo-add" class="btn btn-primary" title="发布新微博">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </button>
+              </div>
+        </form>
+    </div>
+
+    <div class="gua-weibo-main">
+        {% for w in weibos %}
+            <div class="gua-weibo-cell">
+                <img class="gua-weibo-avatar" src="{{ w.avatar }}">
+                <span class="gua-weibo-detail">
+                    <span class="gua-weibo-username">
+                        by : {{ w.username }}
+                    </span>
+                    <span class="gua-weibo-time">
+                        {{ w.created_time }}
+                    </span>
+                    <div class="gua-weibo-content">
+                        {{ w.content }}
+                    </div>
+                </span>
+                <div class="gua-weibo-icon">
+                    <button class="gua-comment-icon btn btn-primary" title="评论">
+                      <span class="glyphicon glyphicon-comment"></span>
+                    </button>
+                    <a class="gua-comment-icon btn btn-primary" title="删除" href="{{ url_for('.delete', id=w.id) }}">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="gua-comment-cell">
+                <form class="form-group" action="/weibo/comment" method="post">
+                    <input type="hidden" name="weibo_id" value="{{ w.id }}">
+                    <input class="gua-comment-input form-control" name="content">
+                    <button class="gua-comment-button btn btn-primary">评论</button>
+                </form>
+                {% for c in w.comment %}
+                <div class="gua-comment-content-cell">
+                    <img class="gua-comment-content-avatar" src="{{ c.avatar }}">
+                    <div class="gua-comment-content-cell-margin">
+                        <div class="gua-weibo-username gua-comment-content">
+                            {{ c.username }}
+                        </div>
+                        <div class="gua-comment-content">
+                            : {{ c.content }}
+                        </div>
+                        <div class="gua-weibo-time">
+                            {{ c.created_time }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+
+  </div>
+{% endblock %}

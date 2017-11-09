@@ -1,0 +1,78 @@
+      body {
+        background-image: url(/static/img/bg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: KaiTi, "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+      }
+      a {
+          text-decoration: none;
+          color: #000;
+      }
+      .active {
+          color: rgb(54, 158, 218);
+      }
+      .gua-container {
+        text-align: center;
+       }
+       .gua-main {
+        width: 300px;
+        margin: 100px auto;
+      }
+      .gua-icon-login-input{
+        background: url(/static/img/user.png) no-repeat scroll 8px;
+        /* 下面这样可以让图片居中 */
+        height: 40px;
+        padding-left: 50px;
+      }
+      .gua-icon-password-input{
+        background: url(/static/img/password.png) no-repeat scroll 8px;
+        /* 下面这样可以让图片居中 */
+        height: 40px;
+        padding-left: 50px;
+      }
+      .gua-header h1 {
+           font-size: 45px;
+           color: lavender;
+       }
+       .gua-tab {
+         margin-top: 30px;
+         margin-bottom: 30px;
+       }
+       .gua-tab a {
+         margin: 10px;
+         color: lavender;
+         font-size: 20px;
+       }
+       .gua-block {
+         height: 3px;
+         width: 45px;
+         position: relative;
+         left: 100px;
+         background-color: rgb(138, 197, 230);
+       }
+
+        .float-left {
+           float: left;
+       }
+
+       .float-right {
+           float: right;
+       }
+      .input-view {
+        background-color: transparent;
+        margin-bottom: 10px;
+        padding-left: 50px !important;
+        width: 300px;
+        height: 46px;
+        font-size: 15px;
+      }
+      .gua-button {
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        width: 300px;
+        color: lavender;
+        background: rgba(23, 180, 187, 0.32);
+        border-radius: 10px;
+        font-size: 20px;
+      }
